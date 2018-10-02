@@ -6,10 +6,9 @@ defmodule Grape.Application do
   use Application
 
   def start(_type, _args) do
-    # List all child processes to be supervised
+    import Supervisor.Spec, warn: false 
     children = [
-      # Starts a worker by calling: Grape.Worker.start_link(arg)
-      # {Grape.Worker, arg},
+      supervisor(Grape.Web.Endpoint, []) 
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
