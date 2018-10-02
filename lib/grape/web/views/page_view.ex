@@ -1,5 +1,3 @@
 defmodule Grape.Web.PageView do
-  def render("index.html", conn) do
-    "Hello from PageView!"
-  end
+  use Phoenix.View, root: "lib/grape/web/templates", namespace: Grape.Web
 end

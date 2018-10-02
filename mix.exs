@@ -7,7 +7,8 @@ defmodule Grape.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      compilers: [:phoenix, :gettext] ++ Mix.compilers
     ]
   end
 
@@ -23,7 +24,9 @@ defmodule Grape.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.3.0-rc"}, 
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:gettext, "~> 0.11"}, 
+      {:phoenix_html, "~> 2.6"}
     ]
   end
 end
