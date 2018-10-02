@@ -31,4 +31,5 @@ use Mix.Config
 
 config :grape, Grape.Web.Endpoint,
   http: [port: 4000],
-  server: true
+  server: true,
+  render_errors: [view: Grape.Web.ErrorView, accepts: ~w(html json)]

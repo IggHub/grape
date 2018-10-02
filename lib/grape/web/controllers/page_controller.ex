@@ -2,6 +2,8 @@ defmodule Grape.Web.PageController do
   use Phoenix.Controller
 
   def index(conn, _params) do
-    text conn, "Hello World!"
+    conn
+    |> put_layout(:false)
+    |> render("index.html") 
   end
 end
