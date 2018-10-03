@@ -8,7 +8,9 @@ defmodule Grape.MixProject do
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      compilers: [:phoenix, :gettext] ++ Mix.compilers 
     ]
   end
 

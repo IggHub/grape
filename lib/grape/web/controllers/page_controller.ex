@@ -1,9 +1,8 @@
 defmodule Grape.Web.PageController do
-  use Phoenix.Controller
+  use Phoenix.Controller, namespace: Grape.Web
 
   def index(conn, _params) do
     conn
-    |> put_layout(:false)
     |> render("index.html") 
   end
 end
